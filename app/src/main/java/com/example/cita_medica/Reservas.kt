@@ -46,32 +46,7 @@ fun Reservas(navController: NavController){
     var showDialogConfirmar by remember {
         mutableStateOf(false)
     }
-    /*
-    if (showDialog){
-        AlertDialog(
-            onDismissRequest = {
-                showDialog = false
-            },
-            confirmButton = {
-                TextButton(onClick = { }) {
-                    Text(text = "Actualizar")
-                    }
-            },
-            dismissButton = {
-                TextButton(onClick = {
-                    showDialog = false
-                }) {
-                    Text(text = "Cancelar")
-                }
-            },
-            title = { Text("Confirmar")},
-            text = {
-                Text(text = "Seguro")
-            }
-        )
-    }
 
-     */
 
     var run by remember {
         mutableStateOf("")
@@ -104,21 +79,21 @@ fun Reservas(navController: NavController){
     Column (
         Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        //verticalArrangement = Arrangement.Center
+
     ){
 
         Text(text = "Ingresa datos requeridos para reserva")
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        //Ingreso de RUN
+        //Ingreso de cedula
         Spacer(modifier = Modifier.height(16.dp))
-        Text(text = "Ingrese RUN")
+        Text(text = "Ingrese cedula")
         OutlinedTextField(value = run, onValueChange = {
             run = it
 
         }, label = {
-            Text(text = "Run")
+            Text(text = "cedula")
         })
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -173,14 +148,7 @@ fun Reservas(navController: NavController){
         }
 
 
-        /*
-        OutlinedTextField(value = especialidad, onValueChange = {
-            especialidad = it
-        }, label = {
-            Text(text = "Especialidad")
-        })
 
-         */
 
         Spacer(modifier = Modifier.height(16.dp))
 
@@ -243,13 +211,7 @@ fun Reservas(navController: NavController){
 
 
         }
-        /*
-        OutlinedTextField(value = horaReserva, onValueChange = {
-            horaReserva = it
-        }, label = {
-            Text(text = "Hora")
-        })
-        */
+
 
         Spacer(modifier = Modifier.height(16.dp))
 
@@ -284,7 +246,7 @@ fun Reservas(navController: NavController){
 
                     text = {
                         Column {
-                            Text(text = "RUN: " + run)
+                            Text(text = "cedula: " + run)
                             Text(text = "Especialidad: " + especialidad)
                             Text(text = "Fecha: " + fechaReserva)
                             Text(text = "Hora: " + horaReserva)
@@ -319,65 +281,6 @@ fun Reservas(navController: NavController){
                 )
             }
         }
-        /*
-        //--------------------------
-
-        if (showDialogReserva){
-            AlertDialog(
-                onDismissRequest = {
-                    //showDialogReserva = false
-                },
-                confirmButton = {
-                    TextButton(onClick = {showDialogConfirmar = true})
-                    {
-                        Text(text = "Confirmar Reserva")
-
-                        if (showDialogConfirmar){
-                            AlertDialog(
-                                onDismissRequest = {
-                                    //showDialogConfirmar = false
-                                },
-                                confirmButton = {
-                                    TextButton(onClick = {showDialogConfirmar=false }) {
-                                        Text(text = "Listo")
-
-                                    }
-                                },
-                                text = { Column {
-                                    Text(text = "¡Reserva realizada con Éxito!")
-                                    //showDialogReserva=false
-                                }
-                                }
-
-                            )
-                        }
-
-                    }
-                },
-                dismissButton = {
-                    TextButton(onClick = {
-                        showDialogReserva = false
-                    }) {
-                        Text(text = "Cancelar")
-                    }
-                },
-
-                title = { Text("Datos de Reserva")},
-
-                text = {
-                    Column {
-                        Text(text = "RUN: " + run)
-                        Text(text = "Especialidad: " + especialidad)
-                        Text(text = "Fecha: " + fechaReserva)
-                        Text(text = "Hora: " + horaReserva)
-                    }
-                }
-
-            )
-        }
-
-         */
-        //---------------------------
 
         Spacer(modifier = Modifier.height(32.dp))
 

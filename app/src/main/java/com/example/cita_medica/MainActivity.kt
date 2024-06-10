@@ -30,15 +30,13 @@ class MainActivity : ComponentActivity() {
                 }
 
             })
-            //MyComponent()
-            //LoginScreen()
-            //Reservas()
+
         }
     }
 }
 
 
-/*
+
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
@@ -55,4 +53,3 @@ fun GreetingPreview() {
     }
 }
 
- */

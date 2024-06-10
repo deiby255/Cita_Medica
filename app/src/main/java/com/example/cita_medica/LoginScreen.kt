@@ -47,7 +47,7 @@ fun LoginScreen(navController: NavController){
         Image(painter = painterResource(id = R.drawable.logomedico), contentDescription = "Login Imagen",
             modifier = Modifier.size(200.dp))
 
-        Text(text = "Bienvenido a Citas Médicas", fontSize = 28.sp, fontWeight = FontWeight.Bold)
+        Text(text = "Citas Médicas ibero", fontSize = 28.sp, fontWeight = FontWeight.Bold)
 
         Spacer(modifier = Modifier.height(4.dp))
 
@@ -101,7 +101,7 @@ fun LoginScreen(navController: NavController){
             modifier = Modifier
                 .size(60.dp)
                 .clickable {
-                    //Click de Gmail
+
                 }
         )
 
